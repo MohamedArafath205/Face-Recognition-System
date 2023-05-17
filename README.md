@@ -18,8 +18,14 @@ pip install opencv-python
 ```
 pip install face-recognition
 ```
-
 # Now you are good to use my program.
 If you face any problems while downlaoding the face-recognition library please download dlib file regarding to your python version.
 
 If you face any issues you can contact me via mail: mohamedarafath205@gmail.com
+
+# For using my Tkinter applicaiton
+1. Download Tkinter and webbrowser
+```
+pip install tkinter
+pip install webbrowser
+```
