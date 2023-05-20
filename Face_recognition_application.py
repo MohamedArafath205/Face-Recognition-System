@@ -53,6 +53,7 @@ def run_model(pogress_bar):
 def run_thread_model(progress_bar):
     global run
     run = True
+    progress_bar.place(x=100, y=400)
     runmodel = threading.Thread(target=run_model, args=(progress_bar,))
     runmodel.start()
 
@@ -61,6 +62,7 @@ def stop_model(progress_bar):
     run = False
     progress_bar_label.config(text="")
     progress_bar['value'] = 0
+    progress_bar.place_forget()
     if cap is not None:
         cap.release()
         cap = None
@@ -75,7 +77,6 @@ root.configure(bg="#ffffff")
 
 # progress bar
 progress_bar = ttk.Progressbar(root, orient="horizontal", length=500, mode="determinate")
-progress_bar.place(x=100, y=400)
 
 # heading
 heading = tk.Label(root, text="Face Recognition", bg="#ffffff", fg="#000000", font=("fira code", 23))
